@@ -14,8 +14,6 @@ import com.mongodb.MongoClient;
 public class Main {
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
-
         Options options = new Options();
         Option hostOp = new Option("h", "host", true, "MongoDB host name");
         Option threadsOp = new Option("t", "threads", true, "number of threads to be launched");

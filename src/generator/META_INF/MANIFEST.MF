@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: norberto@mongodb.com
+Build-Jdk: 1.6.0_35
+Created-By: MongoDB
+Main-Class: storm.Main
+Archiver-Version: Plexus Archiver

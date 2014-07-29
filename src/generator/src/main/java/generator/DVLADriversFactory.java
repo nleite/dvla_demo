@@ -1,5 +1,6 @@
 package generator;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.Random;
@@ -242,9 +243,13 @@ import com.mongodb.DBObject;
  * @author norberto
  *
  */
-public class DVLADriversFactory implements DocumentFactory {
+public class DVLADriversFactory implements DocumentFactory, Serializable {
 
-//    private SecureRandom random = new SecureRandom();
+/**
+     * 
+     */
+    private static final long serialVersionUID = 422993374491565801L;
+    //    private SecureRandom random = new SecureRandom();
     private Random rand = new Random();
     private long beginTime = Timestamp.valueOf("1983-09-25 00:00:00").getTime();
     private long endTime = Timestamp.valueOf("2014-09-25 00:00:00").getTime();
@@ -432,6 +437,7 @@ public class DVLADriversFactory implements DocumentFactory {
         document.put("status", genStatus());
         document.put("driverStatedFlags", genDriverFlags());
         document.put("firstProvisionalDate", genDate());
+        document.put("lisense", genLicence());
         document.put("HROType", randHROType());
         /*
        

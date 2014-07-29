@@ -32,7 +32,7 @@ public class Loader implements Runnable {
     public void run() {
         while( !Thread.currentThread().isInterrupted()){
             DBObject obj = factory.produce();
-            obj.put("_id", idSeed++);
+//            obj.put("_id", idSeed++);
             insertDocument(obj);
         }
         
